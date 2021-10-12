@@ -1,0 +1,92 @@
+<html>
+  <head>
+  </head>
+  <title>MobileNet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <body >
+    <center>
+<div >
+<h2>Case study-2<img src="download.png"></h2>
+</div>
+
+
+  <br>
+  <br>
+  <hr>
+ <h3 id="ok">1. Test Image</h3>
+ 
+<img src="download (25).jfif">
+
+ <h4 id="green">Output on Google Lens- water bottle</h4>
+ <h4 id="red">Output on Mobilenet Model- cocktail or shaker </h4>
+ <br>
+ <h3 id="pink">Results are google lens is more accurate. </h3>
+ <hr>
+
+ <br>
+ <br>
+ <hr>
+<h3 id="ok">2. Test Image</h3>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVGRTE6aFhtDEkLfYBVbqYhxFpXovpC5P7OQ&usqp=CAU">
+
+<h4 id="green">Output on google lens- crocks </h4>
+<h4 id="red">Output on Mobilenet Model- sock </h4>
+<br>
+<h3 id="pink">results are google lens is more accurate. </h3>
+<hr>
+
+
+<br>
+<br>
+<hr>
+<h3 id="ok">3. Test Image</h3>
+
+<img src="https://n4.sdlcdn.com/imgs/h/b/t/LG-Plasma-TV-Remote-Compatible-SDL857188656-1-1ec71.jpeg" id="k">
+
+<h4 id="green">Output on google lens-TV remote  </h4>
+<h4 id="red">Output on Mobilenet Model-TV remote  </h4>
+<br>
+<h3 id="pink">results are both models is more accurate. </h3>
+<br>
+<br>
+<hr>
+<h3 id="ok">4. Test Image</h3>
+
+<img src="data:image/jpeg;base64,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" >
+
+<h4 id="green">Output on google lens-ps4 remote controller </h4>
+<h4 id="red">Output on Mobilenet Model- Power drill</h4>
+<br>
+<h3 id="pink">results are google lens is more accurate. </h3>
+<hr>
+<br>
+<br>
+<hr>
+<h3 id="ok">5. Test Image</h3>
+
+<img src="" >
+
+<h4 id="green">Output on Wolfram project-pen</h4>
+<h4 id="red">Output on Mobilenet Model- vacum cleaner </h4>
+<br>
+<h3 id="pink">results are Wolfram project is more accurate. </h3>
+<hr>
+<hr>
+<h3 id="last">I have tested 5 images MobileNet has predicted 1 right and google lens has predicted 5 right so according to me google lens is more accurate</h3>
+ <hr>
+</center>
+
+
+    
+<script src="main.js"></script>
+  </body>
+</html>
